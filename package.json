@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "start-dev": "webpack -w & npm start"
+    "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.3",
     "pg": "^7.4.3",
     "react": "^16.5.2",
