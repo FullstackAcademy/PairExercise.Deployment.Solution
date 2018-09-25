@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
+    "build-client": "webpack -p",
     "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w",
     "seed": "node script/seed.js",
     "test": "NODE_ENV=test mocha {server,client}/**/*.test.js --require @babel/polyfill --require @babel/register"
