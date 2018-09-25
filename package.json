@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server/index.js",
     "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w",
-    "seed": "node script/seed.js"
+    "seed": "node script/seed.js",
+    "test": "NODE_ENV=test mocha {server,client}/**/*.test.js --require @babel/polyfill --require @babel/register"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +35,12 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2"
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "chai": "^4.1.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
   }
 }

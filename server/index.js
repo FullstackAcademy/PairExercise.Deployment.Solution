@@ -15,7 +15,12 @@ app.get('/api/users', async (req, res, next) => {
   }
 })
 
-app.listen(PORT, (e) => {
-  if (e) throw e
-  console.log(`listening on port ${PORT}`)
-})
+
+module.exports = app
+
+if (require.main === module) {
+  app.listen(PORT, (e) => {
+    if (e) throw e
+    console.log(`listening on port ${PORT}`)
+  })
+}
