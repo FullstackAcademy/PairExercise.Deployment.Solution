@@ -11,6 +11,7 @@ app.get('/api/users', async (req, res, next) => {
     const users = await db.models.user.findAll()
     res.json(users)
   } catch (e) {
+    console.error(e)
     next(e)
   }
 })
