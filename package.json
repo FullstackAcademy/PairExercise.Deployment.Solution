@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
     "build-client": "webpack -p",
-    "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w",
+    "deploy": "script/deploy",
     "seed": "node script/seed.js",
+    "start": "node server/index.js",
+    "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w",
     "test": "NODE_ENV=test mocha {server,client}/**/*.test.js --require @babel/polyfill --require @babel/register"
   },
   "keywords": [],
@@ -17,6 +18,7 @@
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "faker": "^4.1.0",
+    "nodemon": "^1.18.4",
     "pg": "^7.4.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
