@@ -3,3 +3,4 @@ node_modules
 *.log
 bundle.js
 bundle.js.map
+#adding note to force commit
