@@ -19,9 +19,9 @@ before_script:
 # before_deploy:
 #   - npm run build-client # make the bundle
 #   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: YOUR-HEROKU-APP-NAME-HERE # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE
+deploy:
+    skip_cleanup: true # prevents travis from deleting the build
+    provider: heroku
+    app: beths-project
+    api_key:
+      secure: ZcCDK6hDY9SRYi5eunIBc+tUxYf2I0HPB1bMdR5TjxEU7yM4LcettkSN+uiYiXyTkNRVteTOoNZe7HBZvh6a0ckiyzZZDR5ZP0kfrhiBgUb0pp+ZSWkfvplRypb8DvmYziNzfQWtj4kdPq9jiOmCvlT7xNqk/vXxdDUsN8UzR7Vhg8+niZBHfp4zl884IJ+IxxR4WWUdWKHHGxD2T1gtjM7RMLrQSPC86YOiC7Onw8rGFcnxEnozIMLA8WhsBz4b606JL9mrXGwGYVM1TG7oGJRnTJVjQ0G/LuwG2maHHGiIW1WK2q5HqgQZmCLpIFLrbGJGVo2guuwDD7T7NH4Oj4/wqj25GZuQIN5CQVsQQL9mhFF6ohLXdQSvp5k6N9CVxiHgN0A68RM0VB/OmWKwpel92gBJh6BxchsC8If7Vo1Vn2cqKpjzOZJm58BI3Zx0bmpGxt0qlfD3sryRpEhqU1L5TgIbZs947NAc/0H93X+xzvSyYHuzi3dm1q1/trr98/+4rZKUkS6PNVsvxuUnxHvClSHNDQ6eoWURgvECatxUfYYiKb9zxeLOMxdeKcr9X0RkgTKHoZcwaUKrU+454RaxpA8lM2/s5JsS0Qb1iLITAiFiipzlnpV3MQBffoJhkX3CAi88z0xIib72ispPXbTRtrOHfNBvXkag9nkVd04=
