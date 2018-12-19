@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.10.0"
+  },
   "scripts": {
     "build-client": "webpack -p",
     "deploy": "script/deploy",
@@ -19,7 +22,6 @@
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "faker": "^4.1.0",
-    "nodemon": "^1.18.4",
     "pg": "^7.4.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -45,6 +47,7 @@
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
     "supertest": "^3.3.0",
     "webpack": "^4.20.1",
     "webpack-cli": "^3.1.1"
