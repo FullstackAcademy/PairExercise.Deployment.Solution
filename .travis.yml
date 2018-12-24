@@ -16,12 +16,13 @@ install:
 before_script:
   - psql -c 'create database "deployment-exercise-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 
-# before_deploy:
-#   - npm run build-client # make the bundle
-#   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: YOUR-HEROKU-APP-NAME-HERE # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE
+before_deploy:
+  - npm run build-client # make the bundle
+  - rm -rf node_modules # omit from the tarball, since we skip cleanup
+deploy:
+  skip_cleanup: true # prevents travis from deleting the build
+  provider: heroku
+  app: 'whispering-fjord-38205' # see README
+  api_key:
+    secure: "wGdYNo3SBNEDyXF5Y9EGm5D51LFeDkOKAo6VXWWhOOu/ewzjVG7uS1GKUnQogKzYT49Cc71kTD6eJJ2ZT8Mdb0ostjAmQGBXcc6g8qfl0rJ4p3Be09VdAWYmzSrW3MJ2LC6UBqfYH2FswjPcsjUuWBOFPIJcRbWKxSzGsMCqMvY9lajZFU61gmizhTQNo2rRNsXQqyOp/AnSe00Ztkgja3HCleRckH6casHm580VO/NKp+W7eNr3w3RWwC/76qHGbzJcDbTw5a+nJh07b45bVnu3KEV7JxdBuVkX78xcyXAG4Ao8+gQ9+enpnLxmGJiGSQjsgGHFOhJ9XXPBMfUeWlsLGVcOKF5MJ8M1EzYcTAWBsVmXj03B+PFFziUczmV9yFD4hEVAAhF3EVip/PesiInlsH36kx+k+qT8/2Spb8l6jMuJ2qydEuBmAbz7E6nr2BDoPObTHR26ayjlvmHl0/WYIpC5rF0PKIflAJchlC6XJ0ucewGcf76/GtCc5gHikmAemdcsY3Yo3hNXDawLZZePzsX269jxCxBHnMSBpanJfv0Qpf2w3dNW4lZ9DofsUzaxQZitzlt6eU/CqW8V0KklAY/D2CMPsf0Jn1dEG49/vQrdqy2gcm7SDZN2xDYXOyUmpy6pg7c9Q9blSAAjI4w6VXo1UKtXROVsjkZmneY="
+
