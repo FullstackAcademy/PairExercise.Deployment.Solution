@@ -16,12 +16,12 @@ install:
 before_script:
   - psql -c 'create database "deployment-exercise-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 
-# before_deploy:
-#   - npm run build-client # make the bundle
-#   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: enriques-new-app # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE
+before_deploy:
+  - npm run build-client # make the bundle
+  - rm -rf node_modules # omit from the tarball, since we skip cleanup
+deploy:
+  skip_cleanup: true # prevents travis from deleting the build
+  provider: heroku
+  app: enriques-new-app # see README
+  api_key:
+    secure: qa9yS0q/OhbBEFz588Fe7va+5scteroPLF89Ho8bEypU7tzHvLCUrhWX5yGu2kuegmJityd3RxRIy+4w1bGx6XEQwgn5IVHmHc/f72NxtLXqPnM05lToPtrYFtdjV19HbAZmr8N7gjyzQ3MQkwmFZ25W02eZlKZfQaj62QD4bCvp0sKhfXekyhNlBGgmdYVxAYJCo7gJHAfJsDrvwEcuh0C9jixne3E7NyIwGAI33xKuBw6JsFATwfSeYP7bHgMWCaUF2d8YFLRkTMMIsQsoL3sn6YqfU0Gmdu4lT65HC4mQQyZLgIcS0Ar22ENmxiO6MwO9UbEm8ZR4csGTSrAFcDLPpQxAqshHzG0JfD1pNIWghFjLUfAcWNRKa6cWCarKfW7kUwPr2KSwXkHNLv+GA1uxyIUeRS3/doDuZOWzKeid+29259btp/MXxR6Ya2F9s8y8xc4MbQNlLrePZrs53HP6DtlEVaIEgOdxFyeQreJPEsA60tfcwdNOSKrMGvMnczoPoTZ2//HHo90QZNXAjfKuiO5fE8pGdQfXcD3eRKtVlbwHwz334Gezwr1oJBoIjMi5gHQA8t0AckE0dCtUX68c2IyUlg3V8Lpu6b3UvqmasKbaTp36pWp6jUuEkTir75baPlc66NX6RgbZLO4UfnzpzTjp1v/XtLi+B3nC6Wg=
