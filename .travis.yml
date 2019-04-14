@@ -22,6 +22,6 @@ before_deploy:
 deploy:
   skip_cleanup: true # prevents travis from deleting the build
   provider: heroku
-  app: YOUR-HEROKU-APP-NAME-HERE # see README
+  app: erics-super-cool-practice-app # see README
   api_key:
-    secure: YOUR-***ENCRYPTED***-API-KEY-HERE
+    secure: lb7dW1p4xLle0nGibR70vj6iUX8Oq3p9u/ksfXnTSBm5nq0o3vq2Os55UAmZuhNYOlmN9YaMjetd7LjnLAg3Sb7hNhYkGFoT2jYuCwO2a1fyZg3TgE0QOkv56FbwVJaJ96sTLJLv0RvbV2ECWkQmzjYTyk9m2xnKazFcj340zPnU9uYuRdfIJ+2WmrO82zdEG5oy4Fygp8GOCO8/TS7c2bycKzd64VQwyJG+MZBWpRWoMu1QS7CNQO2emuoUowsP8tdYZUQHeBxHbdy0vjLZvdWs76N8JBDkBuj+cjrzy/9BKeddUH4Qoa4gHROz5oqsvPu6y1UMYuWZiH7I6LtJavN6v1t20jm9BVzyVP8W3kpD70AKp++/Bt4LOYFN3Sy1O5pFBtx8xjXpPzrlBkkZJojz8venSVeB2fBYYGO8Hu3uLVWkKJTjeDlldWOmIJeWSp6KKWD76nhkF+Z2IdB03o73Zm8w9hwXbp89sHHtSSCvRgok7mtnYQyRqJRxrsR9hyfiWJHYIe4/humDId3wohKbgR6Zh9wGWVjJNxZQPQZX16MaUUL1XDLAt2778MLrR8kb4fALHHXkHgj7kZ60r2An9YXfgK5BXzPxnRvosoM9hlYsSB5LDHUzJx4881l0h/wPybPu9drZMTTnZi/TnuRXR73zEjAIfHy9jAm73f8=
