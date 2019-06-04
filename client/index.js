@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3>Hello World To The Max!!</h3>
+        <h3>Hello World To The Maxxx!!</h3>
         <UserList users={this.state.users} />
       </div>
     )
