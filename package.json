@@ -6,7 +6,7 @@
   "scripts": {
     "build-client": "webpack -p",
     "deploy": "script/deploy",
-    "heroku-token": "script/encrypt-heroku-auth-token",
+    "heroku-token": "script/encrypt-heroku-auth-token.js",
     "seed": "node script/seed.js",
     "start": "node server/index.js",
     "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w",
@@ -16,14 +16,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "express": "^4.16.3",
     "faker": "^4.1.0",
+    "git-url-parse": "^11.1.2",
     "nodemon": "^1.18.9",
     "pg": "^7.4.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "sequelize": "^4.38.1"
+    "sequelize": "^4.38.1",
+    "simple-git": "^1.122.0",
+    "yaml": "^1.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
