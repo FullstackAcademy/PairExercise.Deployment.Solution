@@ -15,13 +15,14 @@ install:
   - npm ci # faster, goes only from package-lock
 before_script:
   - psql -c 'create database "sbc-heroku-wrkshp-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
-
-# before_deploy:
-#   - npm run build-client # make the bundle
-#   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: YOUR-HEROKU-APP-NAME-HERE # see README
-#   api_key:
-#     secure: YOUR-***ENCRYPTED***-API-KEY-HERE
+before_deploy: # omit node_modules, since we set skip_cleanup below
+  - rm -rf node_modules
+deploy: # see README for details on these keys
+  # prevents travis from deleting the build
+  skip_cleanup: true
+  provider: heroku
+  # app should be your heroku app name; see README
+  app: sbc-heroku-wrkshp
+  # the secure key indicates an encrypted value; see README
+  api_key:
+    secure: Nbt/CJWzoG04i8pIH+66+4Xr03ZDdcWyqBG0hayaUnCAYmsZK+I+OvFKNuKaV9tVwH/vhCIBi+rsHY+AkDQrzYWB4iK5Mbx0tI3aEtlRt8hY4WfFcuBpubww+F8+BQvmmnVFPn7suW5sktAnLmqsXkgmrTQkK8wUKT5gBm/7ffTH9e3Xev9MCWY+sPN6PXa8aXDD909UAVTCfs8Aa64+myQXBpz6RoheWlQtmG4HMM1zCpRUD5tMwkbVs7kJPfrmw6ipjgF/Mn/UJ7Jy7XOpN6pEbjtOrCuorw8FCl2xmrk4itEVLwuE7Jx2i64BuEiPW4cnUhIYjaVTVhb+GkiOkwu6Ocrnzuh6lIPCFv/rbPOqnpN1aJVenyJeCXK4l+/U031t0ysAdRFf5hgJmbhXwk0kLLyMOV0TProHBDr0/KCkgQzC8dBx4UaiMB2L6TkgfHtLXJhVB5AnAOcZtmwWliov6JIky5TMKrY+G7BLYcJ4jUZ+5n/66vBkIp9QtHsM50/tB+8ULWvNIqxYHDkh5tuftmXQPJ+3nRgPIPDPp0dM2FbHMIybLwoEpGdrzyvmglZkJLQmLEtIF5qmwcu7iimgzAL9YjTAeP/oppSWb/2OPbCzcTML1I2QK900nrxVwjzyck8Oj2+FIm1s7nQWoyrXZ3oCxj3qvdHWEwpare0=
