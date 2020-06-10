@@ -14,8 +14,11 @@ describe('GET /users', () => {
 
   it('should return list of users', async () => {
     const res = await request(app).get('/api/users')
+    console.log('before expect 200')
     expect(res.status).to.equal(200)
+    console.log('after expect 200, before expect res.body.length')
     expect(res.body.length).to.equal(seedUsers.length)
+    console.log('after expect res.body.length')
     done()
   })
 })
