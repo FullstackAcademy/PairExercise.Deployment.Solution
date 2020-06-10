@@ -8,13 +8,21 @@ const seedUsers = require('../script/users.json')
 describe('GET /users', () => {
 
   before(async () => {
-    await db.sync({ force: true })
-    await db.models.user.bulkCreate(seedUsers)
+    try {
+      await db.sync({ force: true })
+      await db.models.user.bulkCreate(seedUsers)
+    } catch (error) {
+      console.error('error syncing or creating db')
+    }
   })
 
   it('should return list of users', async () => {
-    const res = await request(app).get('/api/users')
-    expect(res.status).to.equal(200)
-    expect(res.body.length).to.equal(seedUsers.length)
+    try {
+      const res = await request(app).get('/api/users')
+      expect(res.status).to.equal(200)
+      expect(res.body.length).to.equal(seedUsers.length)
+    } catch (error) {
+      console.error('error requesting get route')
+    }
   })
 })
