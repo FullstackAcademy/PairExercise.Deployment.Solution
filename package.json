@@ -10,7 +10,7 @@
     "seed": "node script/seed.js",
     "start": "node server/index.js",
     "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w",
-    "test": "NODE_ENV=test mocha {server,client}/**/*.test.js --require @babel/polyfill --require @babel/register"
+    "test": "NODE_ENV=test mocha --timeout 5000 {server,client}/**/*.test.js --require @babel/polyfill --require @babel/register"
   },
   "keywords": [],
   "author": "",
