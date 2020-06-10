@@ -10,7 +10,7 @@
     "seed": "node script/seed.js",
     "start": "node server/index.js",
     "start-dev": "nodemon server/index.js --ignore public --ignore client & webpack -w",
-    "test": "NODE_ENV=test mocha --timeout 20000 {server,client}/**/*.test.js --require @babel/polyfill --require @babel/register"
+    "test": "NODE_ENV=test mocha {server,client}/**/*.test.js --require @babel/polyfill --require @babel/register"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
     "pg": "^7.4.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "sequelize": "^4.38.1",
+    "sequelize": "^5.15.1",
     "simple-git": "^1.122.0",
     "yaml": "^1.6.0"
   },
