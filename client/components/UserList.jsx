@@ -5,7 +5,7 @@ export default ({ users }) => (
   <div className="user-list">
 
     <p className='lead'>Here's a list of {users.length} completely fictitious people:</p>
-    <p>Do changes in this branch show up on master branch since they're merged? Or do they diverge again?</p>
+    <p>Helloooo</p>
 
     <table className="table">
       <tbody>
