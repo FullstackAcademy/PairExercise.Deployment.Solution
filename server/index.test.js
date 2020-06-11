@@ -12,7 +12,8 @@ describe('GET /users', () => {
       await db.sync({ force: true })
       await db.models.user.bulkCreate(seedUsers)
     } catch (error) {
-      console.log(error)
+      // console.log(error)
+      expect(error.message).to.contain('before hook: what error is this');
     }
   })
 
@@ -22,7 +23,8 @@ describe('GET /users', () => {
       expect(res.status).to.equal(200)
       expect(res.body.length).to.equal(seedUsers.length)
     } catch (error) {
-      console.log(error)
+      // console.log(error)
+      expect(error.message).to.contain('test unit: what error is this');
     }
   })
 })
