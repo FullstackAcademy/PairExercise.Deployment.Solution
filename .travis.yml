@@ -22,6 +22,6 @@ before_deploy:
 deploy:
   skip_cleanup: true # prevents travis from deleting the build
   provider: heroku
-  app: the-deployment # see README
+  app: the-deployment # see README ...from where????
   api_key:
     secure: YOUR-***ENCRYPTED***-API-KEY-HERE
