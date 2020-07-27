@@ -2,6 +2,7 @@ import React from 'react'
 import { expect, enzyme, shallow } from '../lib/test-setup'
 import User from './User.jsx'
 
+// an excuse to commit
 // console.log(shallow)
 const fakeUser = {
   firstName: 'Fake',
