@@ -3,7 +3,7 @@ import User from './User.jsx'
 
 export default ({ users }) => (
   <div className="user-list">
-
+   <p className='lead'>THIS IS A TEST FOR TRAVIS CI</p>
     <p className='lead'>Here's a list of {users.length} completely fictitious people:</p>
 
     <table className="table">
