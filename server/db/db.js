@@ -14,6 +14,7 @@ const client = new Sequelize(dbUrl, {
   },
 })
 
+//
 module.exports = client
 
 // This is a global Mocha hook used for resource cleanup.
