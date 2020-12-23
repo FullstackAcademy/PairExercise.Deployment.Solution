@@ -15,7 +15,7 @@ const client = new Sequelize(dbUrl, {
   },
 })
 
-client.connect()
+//client.connect()
 
 client.query(
   'SELECT table_schema,table_name FROM information_schema.tables;',
