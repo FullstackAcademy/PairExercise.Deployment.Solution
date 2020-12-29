@@ -22,7 +22,9 @@
     "fsevents": "^2.2.1",
     "git-url-parse": "^11.1.2",
     "nodemon": "^1.18.9",
+
     "pg": "^7.18.2",
+
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "sequelize": "^4.38.1",
