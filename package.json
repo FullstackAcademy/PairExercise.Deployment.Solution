@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "express": "^4.16.3",
     "faker": "^4.1.0",
     "git-url-parse": "^11.1.2",
