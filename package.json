@@ -25,7 +25,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "sequelize": "^4.38.1",
-    "simple-git": "^1.122.0",
+    "simple-git": "^3.5.0",
     "yaml": "^1.6.0"
   },
   "devDependencies": {
